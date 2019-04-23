@@ -39,7 +39,7 @@ public class RestaurantDetail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.restaurant_details);
+        setContentView(R.layout.dish_selection);
         Intent intent = getIntent();
         Meal item = (Meal)intent.getSerializableExtra("item");
         final Integer id = Integer.parseInt(intent.getStringExtra("id"));

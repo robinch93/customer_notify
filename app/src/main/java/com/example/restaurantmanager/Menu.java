@@ -28,7 +28,7 @@ public class Menu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.restaurants);
+        setContentView(R.layout.search_restaurants);
         String json = MyJSON.getData(getBaseContext(),1);
 
         listView = (ListView) findViewById(R.id.menuList);

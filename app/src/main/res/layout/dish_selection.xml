@@ -37,7 +37,6 @@
 
     </LinearLayout>
 
-
     <LinearLayout
         android:id="@+id/layoutImage"
         android:layout_width="match_parent"
