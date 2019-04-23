@@ -53,8 +53,8 @@
                 android:id="@+id/profImgBtn"
                 android:layout_width="180dp"
                 android:layout_height="180dp"
-                android:src="@drawable/restraunt"
-                tools:srcCompat="@drawable/restraunt"
+                android:src="@drawable/customer"
+                tools:srcCompat="@drawable/customer"
                 android:scaleType="fitCenter"/>
         </LinearLayout>
 

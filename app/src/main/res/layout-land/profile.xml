@@ -23,8 +23,8 @@
             android:id="@+id/profImgBtn"
             android:layout_width="174dp"
             android:layout_height="171dp"
-            android:src="@drawable/restraunt"
-            tools:srcCompat="@drawable/restraunt" />
+            android:src="@drawable/customer"
+            tools:srcCompat="@drawable/customer" />
 
         <ImageButton
             android:id="@+id/editButton"

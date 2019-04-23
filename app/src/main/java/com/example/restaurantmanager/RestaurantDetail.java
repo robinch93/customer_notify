@@ -5,11 +5,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,7 +17,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import java.io.File;
@@ -28,7 +25,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class MenuDetail extends AppCompatActivity {
+public class RestaurantDetail extends AppCompatActivity {
 
     private Button saveBtn;
     private static final int CAMERA_REQUEST = 1888;
@@ -42,7 +39,7 @@ public class MenuDetail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menu_details);
+        setContentView(R.layout.restaurant_details);
         Intent intent = getIntent();
         Meal item = (Meal)intent.getSerializableExtra("item");
         final Integer id = Integer.parseInt(intent.getStringExtra("id"));

@@ -34,8 +34,8 @@
                 android:id="@+id/profImgBtn"
                 android:layout_width="174dp"
                 android:layout_height="174dp"
-                android:src="@drawable/restraunt"
-                tools:srcCompat="@drawable/restraunt" />
+                android:src="@drawable/customer"
+                tools:srcCompat="@drawable/customer" />
         </LinearLayout>
 
         <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"

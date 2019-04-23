@@ -7,21 +7,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Menu extends AppCompatActivity {
 
@@ -35,7 +28,7 @@ public class Menu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menu);
+        setContentView(R.layout.restaurants);
         String json = MyJSON.getData(getBaseContext(),1);
 
         listView = (ListView) findViewById(R.id.menuList);
@@ -50,7 +43,7 @@ public class Menu extends AppCompatActivity {
                 String value = setItem.getmenuName(); //getter method
                 Integer val = setItem.getid();
 //                Toast.makeText(Menu.super.getBaseContext(), val.toString(), Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getBaseContext(), MenuDetail.class);
+                Intent intent = new Intent(getBaseContext(), RestaurantDetail.class);
                 intent.putExtra("id", val.toString());
                 intent.putExtra("item", setItem);
                 startActivityForResult(intent, EditACTIVITY_REQUEST_CODE);
