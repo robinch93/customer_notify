@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="10dp"
+        android:orientation="horizontal"
         android:animateLayoutChanges="true"
         android:paddingTop="15dp">
 
@@ -19,21 +20,22 @@
             android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.10"
             app:srcCompat="?attr/actionModeCloseDrawable" />
 
-        <TextView
-            android:id="@+id/title"
+        <!-- Editext for Search -->
+        <SearchView
+            android:id="@+id/search_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginRight="100dp"
-            android:gravity="center_horizontal"
-            android:layout_weight="0.80"
-            android:inputType="textPersonName"
-            android:text="RESTAURANTS"
-            android:textSize="30sp"
-            android:textStyle="bold|italic" />
+            android:iconifiedByDefault="false"
+            android:padding="2dp"
+            android:queryHint="Search...." />
+        <!-- ListView -->
+
+        <Spinner
+            android:id="@+id/spinnerResType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
@@ -43,7 +45,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
     </ListView>
-
     <!--
     <ListView
         android:id="@+id/simpleListView"
@@ -55,3 +56,4 @@
     -->
 
 </RelativeLayout>
+

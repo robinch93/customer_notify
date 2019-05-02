@@ -2,13 +2,15 @@ package com.example.restaurantmanager;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -16,13 +18,14 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class Menu extends AppCompatActivity {
+public class SearchRestaurant extends AppCompatActivity {
 
     private ListView listView;
     private MealAdapter mAdapter;
     ArrayList<Meal> mealsList;
     private static final int EditACTIVITY_REQUEST_CODE = 0;
     private JSONArray mealResult;
+    String[] resType = { "American", "Chicken", "Healthy", "Indian", "International", "Continental", "Italian", "Kebab", "Thai", "Vegetarian"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +35,15 @@ public class Menu extends AppCompatActivity {
         String json = MyJSON.getData(getBaseContext(),1);
 
         listView = (ListView) findViewById(R.id.menuList);
+        Spinner resSpinner = (Spinner) findViewById(R.id.spinnerResType);
 
         updateListView();
 
+        //Creating the ArrayAdapter instance having the bank name list
+        ArrayAdapter<String> aa1 = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,resType);
+        aa1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //Setting the ArrayAdapter data on the Spinner
+        resSpinner.setAdapter(aa1);
 
         listView.setOnItemClickListener(new  AdapterView.OnItemClickListener() {
 
@@ -42,7 +51,7 @@ public class Menu extends AppCompatActivity {
                 Meal setItem = (Meal) listView.getItemAtPosition(position); //
                 String value = setItem.getmenuName(); //getter method
                 Integer val = setItem.getid();
-//                Toast.makeText(Menu.super.getBaseContext(), val.toString(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(SearchRestaurant.super.getBaseContext(), val.toString(), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getBaseContext(), RestaurantDetail.class);
                 intent.putExtra("id", val.toString());
                 intent.putExtra("item", setItem);

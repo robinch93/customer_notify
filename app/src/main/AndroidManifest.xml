@@ -16,7 +16,7 @@
         <activity android:name=".OrderDetail"></activity>
 
         <activity android:name=".RestaurantDetail"></activity>
-        <activity android:name=".Menu" />
+        <activity android:name=".SearchRestaurant" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

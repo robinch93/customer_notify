@@ -17,7 +17,7 @@ public class MyJSON {
     static String profile = "{name:'Happy Meal', email: 'hm@gmail.com', description: 'Food and chips.', phone:'3411223344', address:'via Android 123 Centro'," +
             "openhours: '12pm - 5pm'  }";
     static String meals ="[" +
-            "{id:1,menuImg:'milkshake',menuName:'milkshake',menuDesc:'hot milkshake',menuPrice:10.0,menuQty:10}," +
+            "{id:1,menuImg:'restaurant1',menuName:'milkshake',menuDesc:'hot milkshake',menuPrice:10.0,menuQty:10}," +
             "{id:2,menuImg:'blueberries',menuName:'blueberries',menuDesc:'clean blueberries',menuPrice:10.0,menuQty:10}," +
             "{id:3,menuImg:'oranges',menuName:'juices',menuDesc:'pure orange juice',menuPrice:10.0,menuQty:10}," +
             "{id:4,menuImg:'pizza',menuName:'pizza',menuDesc:'margerita',menuPrice:10.0,menuQty:10}," +
@@ -35,7 +35,6 @@ public class MyJSON {
             "{id:1,menuImg:'milkshake',menuName:'milkshake',menuDesc:'hot milkshake',menuPrice:10.0,menuQty:10}," +
             "{id:3,menuImg:'oranges',menuName:'juices',menuDesc:'pure orange juice',menuPrice:10.0,menuQty:10}]}" +
             "]";
-
 
     //  0= profile, 1= meal, 2= orders
     public static void saveData(Context context, String mJsonResponse, Integer num) {
