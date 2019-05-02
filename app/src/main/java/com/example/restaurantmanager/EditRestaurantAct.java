@@ -27,6 +27,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class EditRestaurantAct extends Activity {
 
@@ -62,9 +64,8 @@ public class EditRestaurantAct extends Activity {
 //        imageView.setImageBitmap(bitmap);
         saveBtn = (Button)findViewById(R.id.saveButton);
 
-
         //Creating the ArrayAdapter instance having the bank name list
-        ArrayAdapter aa1 = new ArrayAdapter(this,android.R.layout.simple_spinner_item,openhours);
+        ArrayAdapter<String> aa1 = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,openhours);
         aa1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //Setting the ArrayAdapter data on the Spinner
         openhoursTxt.setAdapter(aa1);
