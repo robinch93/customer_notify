@@ -5,8 +5,7 @@ who can choose different items from a restaurant. After an order is placed, a nt
 Below are the screenshots of menu and profile page of delivery app:
 
 ![](images/customer_down.jpg)                ![](images/customer_profile.jpg)
-
-The delivery man can use the map to track the path to reach the customer address. 
+ 
 Google Firebase Console was used to store the data. 
 Below are other activity pages of delivery app:
 
