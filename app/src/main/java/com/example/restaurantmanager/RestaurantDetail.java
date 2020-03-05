@@ -46,10 +46,10 @@ public class RestaurantDetail extends AppCompatActivity {
         menuImgBtn = (ImageButton) findViewById(R.id.menuImgBtn);
 
 
-        EditText menuNameTxt = (EditText)findViewById(R.id.menuNameTxt);
+        EditText menuNameTxt = (EditText)findViewById(R.id.menuNameText);
         EditText menuDescText = (EditText)findViewById(R.id.menuDescText);
-        EditText menuPriceTxt = (EditText)findViewById(R.id.menuPriceTxt);
-        EditText menuQtyTxt = (EditText)findViewById(R.id.menuQtyTxt);
+        EditText menuPriceTxt = (EditText)findViewById(R.id.menuPriceText);
+        EditText menuQtyTxt = (EditText)findViewById(R.id.menuQtyText);
 //        imageView = (ImageButton) findViewById(R.id.profImgBtn);
         menuNameTxt.setText(item.getmenuName());
         menuDescText.setText(item.getmenuDesc());
