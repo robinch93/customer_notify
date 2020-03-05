@@ -7,6 +7,6 @@ Below are the screenshots of menu and profile page of delivery app:
 ![](images/customer_down.jpg)                ![](images/customer_profile.jpg)
  
 Google Firebase Console was used to store the data. 
-Below are other activity pages of delivery app:
+Below are other activity pages of Customer app:
 
 ![](images/customer_activities.PNG)
